@@ -22,5 +22,7 @@ set(PROJECT_SOURCES
         mainwindow.h
 )
 
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /subsystem:console")
+
 add_executable(${PROJECT_NAME} WIN32 ${PROJECT_SOURCES})
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets)
