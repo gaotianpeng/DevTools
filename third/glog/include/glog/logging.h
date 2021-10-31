@@ -102,7 +102,7 @@
 
 #define GFLAGS_DLL_DECLARE_FLAG GOOGLE_GLOG_DLL_DECL
 
-#if 0
+#if 1
 #include <gflags/gflags.h>
 #endif
 
