@@ -2,7 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "ui_main_win.h"
 
+
+namespace Ui {
+    class MainWidget;
+}
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -10,5 +15,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private:
+    Ui::MainWidget* ui;
 };
 #endif // MAINWINDOW_H
