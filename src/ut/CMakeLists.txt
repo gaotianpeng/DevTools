@@ -8,8 +8,7 @@ set(GTEST_ROOT ${PROJECT_SOURCE_DIR}/third/gtest CACHE PATH "Path to googletest"
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
-set(GLOG_ROOT ${PROJECT_SOURCE_DIR}/third/glog CACHE PATH "Path to glog")
-find_package (glog 0.6.0 REQUIRED)
+find_package (glog 0.6.0 REQUIRED PATHS ${PROJECT_SOURCE_DIR}/third/glog)
 include_directories(${GLOG_INCLUDE_DIRS})
 
 add_executable(unit_test test_main.cpp ut_main.cpp)
