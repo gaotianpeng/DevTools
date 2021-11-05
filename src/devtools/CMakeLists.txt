@@ -11,8 +11,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_PREFIX_PATH $ENV{QTDIR})
 
-find_package(Qt6Core REQUIRED)
-find_package(Qt6Widgets REQUIRED)
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Widgets REQUIRED)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -20,7 +20,7 @@ set(PROJECT_SOURCES
         mainwindow.h
 )
 
-qt6_wrap_ui(UIS main_win.ui)
+qt5_wrap_ui(UIS main_win.ui)
 
 add_executable(DevTools WIN32 ${PROJECT_SOURCES}  ${UIS})
-target_link_libraries(DevTools PRIVATE Qt6::Widgets)
+target_link_libraries(DevTools PRIVATE Qt5::Widgets)
