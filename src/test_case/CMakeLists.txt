@@ -4,10 +4,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(Boost_USE_STATIC_LIBS        ON)  # only find static libs
-set(Boost_USE_DEBUG_LIBS        OFF)  # ignore debug libs and
+set(Boost_USE_DEBUG_LIBS        ON)  # ignore debug libs and
 set(Boost_USE_RELEASE_LIBS       ON)  # only find release libs
 set(Boost_USE_STATIC_RUNTIME    OFF)
-find_package(Boost 1.72.0)
+find_package(Boost 1.72.0 COMPONENTS system filesystem unit_test_framework REQUIRED)
 
 message (STATUS "INCLUDE " ${Boost_INCLUDE_DIR})
 message (STATUS  "LIBARY " ${Boost_LIBRARY_DIR})
