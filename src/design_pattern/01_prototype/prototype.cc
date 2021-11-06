@@ -8,7 +8,7 @@ using namespace std;
 #endif
 
 TEST(ProtoType, ProtoType_Case) {
-	  Monkey *pSWK = new SunWuKong("Qi Tian Da Sheng");
+	Monkey *pSWK = new SunWuKong("Qi Tian Da Sheng");
   	EXPECT_TRUE(pSWK != nullptr);
     Monkey *pSWK1 = pSWK->Clone();
     Monkey *pSWK2 = pSWK1->Clone();
