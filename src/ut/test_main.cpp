@@ -3,6 +3,7 @@
 #include "nlohmann/json.hpp"
 
 using nlohmann::json;
+using namespace std;
 
 TEST(HelloTest, BasicAssertions) {
 	// Expect two strings not to be equal.
@@ -36,10 +37,8 @@ TEST(JsonTest, HelloJson) {
 		}}
 	};
 
-	std::string str1 = j1.dump();
-	std::string str2 = j2.dump();
-	EXPECT_TRUE(str1 == str2);
-	std::cout << str1 << std::endl;
+	EXPECT_TRUE(j1.dump() == j2.dump());
 
-	std::cout << j1 << std::endl;
+	auto j3 = json::parse(j1.dump());
+	EXPECT_EQ(3.141, j3["pi"]);
 }
